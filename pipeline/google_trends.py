@@ -61,6 +61,7 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
         batches = batches[:max_batches]
     try:
         py = _client()
+        py_reg = _client()  # cliente aparte: pytrends conserva el geo anterior si se pasa ''
     except Exception as e:  # noqa: BLE001
         print(f"[trends] pytrends no disponible: {e}")
         return None
@@ -86,8 +87,8 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
                     "dates": [d.strftime("%Y-%m-%d") for d in df.index],
                     "values": [round(float(v) * factor, 2) for v in df[kw].tolist()],
                 }
-        reg = _call(lambda: (py.build_payload(batch, timeframe=TIMEFRAME, geo=REGION_GEO),
-                             py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=True))[1],
+        reg = _call(lambda: (py_reg.build_payload(batch, timeframe=TIMEFRAME, geo=REGION_GEO),
+                             py_reg.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=True))[1],
                     label, tries=2)
         if n <= 2:
             print(f"[trends] regiones lote {n}: {None if reg is None else (reg.shape, list(reg.columns)[:6], list(reg.index)[:3])}")
