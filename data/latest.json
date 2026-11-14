@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T17:55:37+00:00",
+ "updated_at": "2026-11-14T18:05:05+00:00",
  "status": {
   "trends": "ok",
   "autocomplete": "ok",
@@ -10,7 +10,7 @@
   "geo": "MX",
   "anchor": "marketing digital",
   "timeframe": "today 12-m",
-  "fetched_at": "2026-11-14T17:53:35+00:00",
+  "fetched_at": "2026-11-14T18:03:00+00:00",
   "batches_ok": 25,
   "batches_total": 25,
   "series": {
@@ -528,7 +528,7 @@
      40.0,
      54.0,
      66.0,
-     80.0,
+     81.0,
      81.0,
      91.0,
      84.0,
@@ -683,7 +683,7 @@
      0.0,
      0.0,
      0.0,
-     1.0
+     0.0
     ]
    },
    "cómo usar chatgpt": {
@@ -907,7 +907,7 @@
      4.0,
      5.0,
      4.0,
-     3.0
+     4.0
     ]
    },
    "prompt engineering": {
@@ -976,7 +976,7 @@
      7.0,
      10.0,
      10.0,
-     9.0,
+     10.0,
      9.0,
      12.0,
      11.0,
@@ -1765,7 +1765,7 @@
      12.08,
      17.58,
      18.67,
-     25.27,
+     25.26,
      30.76,
      37.35,
      36.25,
@@ -1776,10 +1776,10 @@
      57.12,
      57.12,
      47.23,
-     46.14,
+     46.13,
      48.33,
      52.73,
-     53.83,
+     53.82,
      57.12,
      49.43,
      49.43,
@@ -1790,20 +1790,20 @@
      52.73,
      56.02,
      59.32,
-     53.83,
+     53.82,
      69.2,
-     75.8,
+     75.79,
      73.6,
      70.3,
      51.63,
      62.61,
-     75.8,
-     88.98,
+     75.79,
+     88.97,
      105.45,
      109.85,
-     103.26,
-     103.26,
-     109.85
+     103.25,
+     103.25,
+     108.75
     ]
    },
    "copilot microsoft cómo usar": {
@@ -6231,45 +6231,45 @@
      "2026-11-08"
     ],
     "values": [
-     19.0,
+     19.01,
      15.0,
-     21.0,
-     24.0,
-     22.0,
-     18.0,
+     21.01,
+     24.01,
+     22.01,
+     18.01,
      12.0,
      10.0,
-     18.0,
-     23.0,
-     21.0,
-     28.0,
-     24.0,
-     27.0,
-     36.0,
-     36.0,
-     20.0,
-     22.0,
-     26.0,
-     25.0,
-     30.0,
-     27.0,
+     18.01,
+     23.01,
+     21.01,
+     28.01,
+     24.01,
+     27.01,
+     36.01,
+     36.01,
+     20.01,
+     22.01,
+     26.01,
+     25.01,
+     30.01,
+     27.01,
      16.0,
      13.0,
      15.0,
-     18.0,
-     18.0,
+     18.01,
+     18.01,
      15.0,
      15.0,
-     18.0,
-     21.0,
-     32.0,
-     50.0,
-     27.0,
-     19.0,
+     18.01,
+     21.01,
+     32.01,
+     50.01,
+     27.01,
+     19.01,
      15.0,
      16.0,
-     24.0,
-     20.0,
+     24.01,
+     20.01,
      15.0,
      9.0,
      6.0,
@@ -6279,8 +6279,8 @@
      6.0,
      6.0,
      7.0,
-     18.0,
-     23.0,
+     18.01,
+     23.01,
      12.0,
      6.0,
      6.0
@@ -7576,8 +7576,8 @@
     ],
     "values": [
      17.0,
-     22.0,
-     20.0,
+     22.01,
+     20.01,
      15.0,
      12.0,
      13.0,
@@ -7591,7 +7591,7 @@
      13.0,
      15.0,
      17.0,
-     18.0,
+     18.01,
      16.0,
      14.0,
      15.0,
@@ -7612,16 +7612,16 @@
      12.0,
      11.0,
      10.0,
-     22.0,
+     22.01,
      10.0,
      10.0,
      17.0,
      15.0,
      15.0,
-     20.0,
+     20.01,
      9.0,
      14.0,
-     21.0,
+     21.01,
      17.0,
      16.0,
      16.0,
@@ -8523,7 +8523,7 @@
      0.0,
      0.0,
      0.0,
-     1.0
+     0.0
     ]
    },
    "cursos gratis con certificado": {
@@ -8592,7 +8592,7 @@
      0.0,
      7.0,
      11.0,
-     11.0,
+     12.0,
      10.0,
      10.0,
      10.0,
@@ -9195,7 +9195,7 @@
      9.0,
      11.0,
      8.0,
-     9.0
+     8.0
     ]
    },
    "cómo mejorar mi perfil de linkedin": {
@@ -9487,7 +9487,7 @@
      10.0,
      7.0,
      12.0,
-     21.0,
+     21.01,
      16.0,
      17.0,
      16.0,
@@ -9496,14 +9496,14 @@
      13.0,
      17.0,
      17.0,
-     19.0,
+     19.01,
      13.0,
      14.0,
-     18.0,
-     20.0,
-     19.0,
-     18.0,
-     19.0,
+     18.01,
+     20.01,
+     19.01,
+     18.01,
+     19.01,
      14.0,
      15.0,
      15.0,
@@ -9513,10 +9513,10 @@
      12.0,
      12.0,
      12.0,
-     18.0,
+     18.01,
      17.0,
      15.0,
-     18.0,
+     18.01,
      17.0,
      15.0,
      17.0,
@@ -10151,59 +10151,59 @@
      "2026-11-08"
     ],
     "values": [
-     26.5,
-     26.5,
-     25.17,
-     22.52,
+     26.51,
+     26.51,
+     25.18,
+     22.53,
      15.9,
      13.25,
-     18.55,
-     14.57,
+     18.56,
+     14.58,
      15.9,
-     18.55,
+     18.56,
      15.9,
-     11.92,
-     14.57,
-     14.57,
-     14.57,
-     14.57,
+     11.93,
+     14.58,
+     14.58,
+     14.58,
+     14.58,
      15.9,
-     11.92,
-     19.87,
-     17.22,
-     11.92,
-     11.92,
-     14.57,
-     11.92,
-     9.27,
-     14.57,
-     27.82,
-     17.22,
-     11.92,
-     14.57,
-     14.57,
+     11.93,
+     19.88,
+     17.23,
+     11.93,
+     11.93,
+     14.58,
+     11.93,
+     9.28,
+     14.58,
+     27.83,
+     17.23,
+     11.93,
+     14.58,
+     14.58,
      15.9,
-     9.27,
-     14.57,
-     14.57,
+     9.28,
+     14.58,
+     14.58,
      15.9,
-     14.57,
-     17.22,
-     11.92,
+     14.58,
+     17.23,
+     11.93,
      15.9,
-     17.22,
-     14.57,
-     11.92,
+     17.23,
+     14.58,
+     11.93,
      13.25,
      10.6,
      10.6,
-     11.92,
+     11.93,
      13.25,
-     14.57,
-     14.57,
-     11.92,
+     14.58,
+     14.58,
+     11.93,
      13.25,
-     14.57
+     14.58
     ]
    },
    "coursera": {
@@ -10263,59 +10263,59 @@
      "2026-11-08"
     ],
     "values": [
-     91.42,
-     68.9,
-     91.42,
-     82.15,
-     78.17,
-     78.17,
-     60.95,
-     60.95,
-     72.87,
-     74.2,
-     78.17,
-     88.77,
-     76.85,
-     72.87,
-     72.87,
-     78.17,
-     80.82,
-     80.82,
-     79.5,
-     83.47,
-     70.22,
-     72.87,
-     75.52,
-     67.57,
-     62.27,
-     67.57,
-     67.57,
-     76.85,
-     75.52,
-     79.5,
-     74.2,
-     67.57,
-     79.5,
-     68.9,
-     71.55,
-     75.52,
-     67.57,
-     71.55,
-     62.27,
-     66.25,
-     60.95,
-     58.3,
-     56.97,
-     58.3,
-     47.7,
-     55.65,
-     58.3,
-     62.27,
-     58.3,
-     55.65,
-     51.67,
-     53.0,
-     53.0
+     91.45,
+     68.92,
+     91.45,
+     82.17,
+     78.2,
+     78.2,
+     60.97,
+     60.97,
+     72.9,
+     75.55,
+     78.2,
+     88.8,
+     76.87,
+     72.9,
+     72.9,
+     78.2,
+     80.85,
+     80.85,
+     79.52,
+     83.5,
+     70.24,
+     72.9,
+     75.55,
+     67.59,
+     62.29,
+     67.59,
+     67.59,
+     76.87,
+     75.55,
+     79.52,
+     74.22,
+     67.59,
+     79.52,
+     68.92,
+     71.57,
+     75.55,
+     67.59,
+     71.57,
+     62.29,
+     66.27,
+     60.97,
+     58.32,
+     56.99,
+     58.32,
+     47.71,
+     55.67,
+     58.32,
+     62.29,
+     58.32,
+     55.67,
+     51.69,
+     53.01,
+     53.01
     ]
    },
    "udemy": {
@@ -10375,59 +10375,59 @@
      "2026-11-08"
     ],
     "values": [
-     106.0,
-     115.27,
-     113.95,
-     92.75,
-     95.4,
-     132.5,
-     100.7,
-     96.72,
-     117.92,
-     120.57,
-     111.3,
-     117.92,
-     100.7,
-     106.0,
-     106.0,
-     107.32,
-     108.65,
-     109.97,
-     98.05,
-     96.72,
-     99.37,
-     109.97,
-     100.7,
-     96.72,
-     94.07,
-     99.37,
-     98.05,
-     98.05,
-     96.72,
-     92.75,
-     76.85,
-     78.17,
-     82.15,
-     80.82,
-     86.12,
-     91.42,
-     106.0,
-     98.05,
-     95.4,
-     90.1,
-     84.8,
-     84.8,
-     78.17,
-     78.17,
-     62.27,
-     78.17,
-     70.22,
-     72.87,
-     67.57,
-     68.9,
-     68.9,
-     64.92,
-     63.6
+     106.03,
+     115.31,
+     113.98,
+     92.78,
+     95.43,
+     132.54,
+     100.73,
+     96.75,
+     117.96,
+     121.93,
+     111.33,
+     117.96,
+     100.73,
+     106.03,
+     106.03,
+     107.35,
+     108.68,
+     110.01,
+     98.08,
+     96.75,
+     99.4,
+     110.01,
+     100.73,
+     96.75,
+     94.1,
+     99.4,
+     98.08,
+     98.08,
+     96.75,
+     92.78,
+     76.87,
+     78.2,
+     82.17,
+     80.85,
+     86.15,
+     91.45,
+     106.03,
+     98.08,
+     95.43,
+     90.12,
+     84.82,
+     84.82,
+     78.2,
+     78.2,
+     62.29,
+     78.2,
+     70.24,
+     72.9,
+     67.59,
+     68.92,
+     68.92,
+     64.94,
+     62.29
     ]
    },
    "platzi gratis": {
@@ -11015,6 +11015,16 @@
    },
    {
     "seed": "curso de",
+    "query": "elias lara flores primer curso de contabilidad",
+    "value": "100"
+   },
+   {
+    "seed": "curso de",
+    "query": "curso de mixologia",
+    "value": "90"
+   },
+   {
+    "seed": "curso de",
     "query": "curso de contabilidad para no contadores",
     "value": "70"
    },
@@ -11029,19 +11039,29 @@
     "value": "50"
    },
    {
+    "seed": "curso de",
+    "query": "curso de corte y confeccion",
+    "value": "50"
+   },
+   {
     "seed": "inteligencia artificial",
     "query": "riesgo existencial de la inteligencia artificial",
-    "value": "28800"
+    "value": "28900"
    },
    {
     "seed": "inteligencia artificial",
     "query": "restaurar fotos con inteligencia artificial online gratis",
-    "value": "4400"
+    "value": "4550"
+   },
+   {
+    "seed": "inteligencia artificial",
+    "query": "alineación de la inteligencia artificial",
+    "value": "250"
    },
    {
     "seed": "inteligencia artificial",
     "query": "auge de la inteligencia artificial",
-    "value": "180"
+    "value": "190"
    },
    {
     "seed": "inteligencia artificial",
@@ -11050,12 +11070,17 @@
    },
    {
     "seed": "inteligencia artificial",
-    "query": "concepto de inteligencia artificial",
-    "value": "60"
+    "query": "la inteligencia artificial pelicula",
+    "value": "110"
    },
    {
     "seed": "inteligencia artificial",
-    "query": "quien invento la inteligencia artificial",
+    "query": "agente de inteligencia artificial",
+    "value": "90"
+   },
+   {
+    "seed": "inteligencia artificial",
+    "query": "concepto de inteligencia artificial",
     "value": "60"
    },
    {
@@ -11075,18 +11100,28 @@
    },
    {
     "seed": "inteligencia artificial",
+    "query": "a.i. inteligencia artificial",
+    "value": "50"
+   },
+   {
+    "seed": "inteligencia artificial",
+    "query": "el impacto de la inteligencia artificial",
+    "value": "50"
+   },
+   {
+    "seed": "inteligencia artificial",
     "query": "impacto de la inteligencia artificial en la educación",
     "value": "50"
    },
    {
     "seed": "inteligencia artificial",
-    "query": "pelicula de inteligencia artificial",
-    "value": "50"
+    "query": "película inteligencia artificial",
+    "value": "40"
    },
    {
     "seed": "inteligencia artificial",
-    "query": "desventajas de la inteligencia artificial",
-    "value": "50"
+    "query": "crear videos con inteligencia artificial gratis",
+    "value": "40"
    },
    {
     "seed": "inteligencia artificial",
@@ -11094,29 +11129,29 @@
     "value": "40"
    },
    {
-    "seed": "inteligencia artificial",
-    "query": "inteligencia artificial película",
-    "value": "40"
-   },
-   {
     "seed": "marketing digital",
     "query": "agencia de marketing digital en monterrey",
-    "value": "29650"
+    "value": "29900"
    },
    {
     "seed": "marketing digital",
-    "query": "agencia de marketing digital en tijuana",
-    "value": "1300"
+    "query": "email marketing for restaurants",
+    "value": "22700"
    },
    {
     "seed": "marketing digital",
-    "query": "consultora marketing digital",
-    "value": "1250"
+    "query": "consultoria en marketing digital",
+    "value": "11250"
    },
    {
     "seed": "marketing digital",
     "query": "digital marketing agency services",
     "value": "1100"
+   },
+   {
+    "seed": "marketing digital",
+    "query": "consultora marketing digital",
+    "value": "750"
    },
    {
     "seed": "marketing digital",
@@ -11145,6 +11180,16 @@
    },
    {
     "seed": "marketing digital",
+    "query": "embudo de marketing digital",
+    "value": "150"
+   },
+   {
+    "seed": "marketing digital",
+    "query": "tipos de marketing digital",
+    "value": "60"
+   },
+   {
+    "seed": "marketing digital",
     "query": "digital marketing agency",
     "value": "60"
    },
@@ -11166,11 +11211,6 @@
    {
     "seed": "cómo ganar dinero",
     "query": "cómo ganar dinero en tiktok",
-    "value": "60"
-   },
-   {
-    "seed": "cómo ganar dinero",
-    "query": "cómo ganar dinero en youtube",
     "value": "50"
    },
    {
@@ -11180,22 +11220,22 @@
    },
    {
     "seed": "cursos gratis",
-    "query": "cursos de inteligencia artificial gratis en español",
-    "value": "10350"
-   },
-   {
-    "seed": "cursos gratis",
-    "query": "cursos gratuitos del gobierno con certificado",
-    "value": "9000"
-   },
-   {
-    "seed": "cursos gratis",
     "query": "cursos de sap gratis con certificado",
-    "value": "3200"
+    "value": "2850"
    },
    {
     "seed": "cursos gratis",
-    "query": "cursos gratis tec de monterrey",
+    "query": "cursos gratis capacitate para el empleo carlos slim",
+    "value": "2400"
+   },
+   {
+    "seed": "cursos gratis",
+    "query": "instituto rey sejong cursos gratis",
+    "value": "1400"
+   },
+   {
+    "seed": "cursos gratis",
+    "query": "tec de monterrey cursos gratis",
     "value": "200"
    },
    {
@@ -11210,14 +11250,14 @@
    },
    {
     "seed": "cursos gratis",
-    "query": "cursos de excel gratis con certificado",
-    "value": "40"
+    "query": "cursos gratis imss",
+    "value": "70"
    }
   ]
  },
  "autocomplete": {
   "source": "Google y YouTube autocompletado",
-  "fetched_at": "2026-11-14T17:55:28+00:00",
+  "fetched_at": "2026-11-14T18:04:56+00:00",
   "calls": 433,
   "google": {
    "curso de inteligencia artificial": [
@@ -11225,12 +11265,12 @@
     "curso de inteligencia artificial gratis",
     "curso de inteligencia artificial gratis con certificado",
     "curso de inteligencia artificial desde cero",
-    "curso de inteligencia artificial del gobierno",
-    "curso de inteligencia artificial google",
     "curso de inteligencia artificial gobierno de mexico",
-    "curso de inteligencia artificial para contadores",
     "curso de inteligencia artificial gratis google",
-    "curso de inteligencia artificial tec de monterrey"
+    "curso de inteligencia artificial de google",
+    "curso de inteligencia artificial para contadores",
+    "curso de inteligencia artificial gratis harvard",
+    "curso de inteligencia artificial del gobierno"
    ],
    "cómo aprender inteligencia artificial": [
     "cómo aprender inteligencia artificial",
@@ -11419,15 +11459,15 @@
    ],
    "curso de marketing digital": [
     "curso de marketing digital",
-    "curso de marketing digital y redes sociales",
     "curso de marketing digital gratis",
+    "curso de marketing digital y redes sociales",
     "curso de marketing digital google gratis",
     "curso de marketing digital y redes sociales gratis",
     "curso de marketing digital google",
     "curso de marketing digital presencial",
     "curso de marketing digital hubspot",
-    "curso de marketing digital y redes sociales gratis pdf",
-    "curso de marketing digital y redes sociales presencial"
+    "curso de marketing digital carlos slim",
+    "curso de marketing digital cdmx"
    ],
    "cómo aprender marketing digital": [
     "cómo aprender marketing digital",
@@ -11785,8 +11825,8 @@
     "qué es tiktok",
     "qué es tiktok shop",
     "qué es tiktok lite",
-    "qué es tiktok one",
     "qué es tiktok studio",
+    "qué es tiktok one",
     "qué es tiktok show",
     "qué es tiktok for business",
     "qué es tiktok beta",
@@ -11797,9 +11837,9 @@
     "cómo hacer tiktok",
     "cómo hacer tiktok con música",
     "cómo hacer tiktok shop",
-    "cómo hacer tiktok con fotos",
     "cómo hacer tiktok para ganar dinero",
     "cómo hacer tiktokers",
+    "cómo hacer tiktok con fotos",
     "cómo hacer tiktok live",
     "cómo hacer tiktok en vivo",
     "cómo hacer tiktok con varias fotos",
@@ -12320,11 +12360,7 @@
     "como hacer que chatgpt lea en voz alta"
    ],
    "mejor curso de chatgpt": [
-    "el mejor curso de chatgpt",
-    "curso gratis de chatgpt",
-    "mejor uso de chatgpt",
-    "curso completo de chatgpt",
-    "mejores funciones de chatgpt"
+    "el mejor curso de chatgpt"
    ],
    "curso de agentes de ia": [
     "curso de agentes de ia",
@@ -13062,7 +13098,7 @@
      "curso de inteligencia artificial gratis",
      "curso de inteligencia artificial gratis con certificado",
      "curso de inteligencia artificial desde cero",
-     "curso de inteligencia artificial del gobierno"
+     "curso de inteligencia artificial gobierno de mexico"
     ],
     "youtube_top": [
      "curso de inteligencia artificial",
@@ -13184,8 +13220,8 @@
      "prompt engineering",
      "prompt engineering que es y para que sirve",
      "prompt engineering en español",
-     "prompt engineering course",
-     "prompt engineering curso"
+     "prompt engineering curso",
+     "prompt engineering course"
     ],
     "youtube_top": [
      "prompt engineering",
@@ -13370,8 +13406,8 @@
     "youtube": 10,
     "google_top": [
      "curso de marketing digital",
-     "curso de marketing digital y redes sociales",
      "curso de marketing digital gratis",
+     "curso de marketing digital y redes sociales",
      "curso de marketing digital google gratis",
      "curso de marketing digital y redes sociales gratis"
     ],
@@ -13639,8 +13675,8 @@
      "qué es semejanza",
      "qué es semántica",
      "qué es semestral",
-     "qué es semana desfasada",
-     "qué es semestre"
+     "qué es semestre",
+     "qué es sempiterno"
     ],
     "youtube_top": [
      "qué es semana inglesa",
@@ -13946,7 +13982,7 @@
    },
    "ideas de contenido para redes sociales": {
     "google": 10,
-    "youtube": 1,
+    "youtube": 4,
     "google_top": [
      "ideas de contenido para redes sociales",
      "ideas de contenido para redes sociales 2026",
@@ -13955,7 +13991,10 @@
      "100 ideas de contenido para redes sociales"
     ],
     "youtube_top": [
-     "ideas de contenido para redes sociales"
+     "ideas de contenido para redes sociales",
+     "ideas de contenido para instagram",
+     "ideas de contenido para facebook",
+     "ideas para crear contenido en redes sociales"
     ]
    },
    "email marketing": {
@@ -14146,8 +14185,8 @@
     "youtube": 2,
     "google_top": [
      "publicidad programática",
-     "publicidad programática de los publishers",
      "publicidad programática ejemplo",
+     "publicidad programática de los publishers",
      "publicidad programática en marketing digital",
      "publicidad programática y gestión de espacios publicitarios"
     ],
@@ -14162,9 +14201,9 @@
     "google_top": [
      "transformación digital",
      "transformación digital gob mx",
-     "transformación digital utj",
-     "transformación digital y telecomunicaciones",
-     "transformación digital gobierno"
+     "transformación digital infotec",
+     "transformación digital gobierno",
+     "transformación digital en las empresas"
     ],
     "youtube_top": [
      "transformación digital",
@@ -14303,8 +14342,8 @@
      "cursos gratis con certificado",
      "cursos gratis con certificado en linea",
      "cursos gratis con certificado sep",
-     "cursos gratis con certificado cdmx",
-     "cursos gratis con certificado unam"
+     "cursos gratis con certificado carlos slim",
+     "cursos gratis con certificado en linea carlos slim"
     ],
     "youtube_top": [
      "cursos gratis con certificado",
@@ -14337,8 +14376,8 @@
     "youtube": 10,
     "google_top": [
      "cómo hacer un cv",
-     "cómo hacer un cv gratis",
      "cómo hacer un cv profesional",
+     "cómo hacer un cv gratis",
      "cómo hacer un cv para trabajo",
      "cómo hacer un cv digital"
     ],
@@ -14382,8 +14421,8 @@
     "google_top": [
      "marca personal",
      "marca personal ejemplos",
-     "marca personal significado",
      "marca personal en ingles",
+     "marca personal significado",
      "marca personal futbol"
     ],
     "youtube_top": [
@@ -14432,9 +14471,9 @@
     "google_top": [
      "trabajos remotos",
      "trabajos remotos en español",
-     "trabajos remotos cdmx",
+     "trabajos remotos desde casa en español",
      "trabajos remotos mexico",
-     "trabajos remotos desde casa en español"
+     "trabajos remotos sin experiencia"
     ],
     "youtube_top": [
      "trabajos remotos sin experiencia",
@@ -14450,8 +14489,8 @@
     "google_top": [
      "cómo ganar dinero por internet",
      "cómo ganar dinero por internet sin invertir",
-     "cómo ganar dinero por internet sin ser estafado",
      "cómo ganar dinero por internet desde casa",
+     "cómo ganar dinero por internet sin ser estafado",
      "cómo ganar dinero por internet gratis"
     ],
     "youtube_top": [
@@ -14541,10 +14580,10 @@
     "youtube": 10,
     "google_top": [
      "coursera",
-     "coursera unam",
-     "coursera cursos gratuitos",
      "coursera gratis",
-     "coursera que es"
+     "coursera cursos gratuitos",
+     "coursera que es",
+     "coursera plus"
     ],
     "youtube_top": [
      "coursera",
@@ -14594,8 +14633,8 @@
     "youtube": 10,
     "google_top": [
      "coursera gratis",
-     "coursera gratis unam",
      "coursera gratis para estudiantes",
+     "coursera gratis unam",
      "coursera gratis con correo institucional",
      "coursera gratis tec de monterrey"
     ],
@@ -14653,14 +14692,14 @@
     "curso de": [
      "curso de ingles",
      "curso de excel",
-     "curso de excel gratis",
      "curso de induccion",
      "curso de ingles gratis",
-     "curso de manejo",
-     "curso de verano",
-     "curso de primeros auxilios",
+     "curso de excel gratis",
      "curso de electricidad",
-     "curso de uñas"
+     "curso de ingles gratis en linea",
+     "curso de manejo",
+     "curso de primeros auxilios",
+     "curso de ia"
     ],
     "cómo ganar dinero": [
      "cómo ganar dinero",
@@ -14682,8 +14721,8 @@
      "inteligencia artificial para hacer flyers gratis",
      "inteligencia artificial para crear imágenes gratis",
      "inteligencia artificial para hacer presentaciones en power point",
-     "inteligencia artificial para editar fotos",
      "inteligencia artificial para redactar textos gratis",
+     "inteligencia artificial para editar fotos",
      "inteligencia artificial para crear planos de casas gratis"
     ],
     "marketing digital": [
@@ -14694,22 +14733,22 @@
      "marketing digital curso gratuito",
      "marketing digital trabajo",
      "marketing digital ejemplos",
-     "marketing digital unicach",
-     "marketing digital queretaro",
-     "marketing digital pdf"
+     "marketing digital pdf",
+     "marketing digital y redes sociales",
+     "marketing digital google"
     ]
    },
    "CO": {
     "curso de": [
      "curso de manipulación de alimentos",
-     "curso de alturas ministerio de trabajo",
      "curso de alturas",
-     "curso de conduccion",
-     "curso de integridad transparencia y lucha contra la corrupción",
+     "curso de alturas ministerio de trabajo",
      "curso de ingles",
+     "curso de integridad transparencia y lucha contra la corrupción",
      "curso de excel",
-     "curso de ingles gratis",
+     "curso de conduccion",
      "curso de excel gratis",
+     "curso de ingles gratis",
      "curso de vigilancia"
     ],
     "cómo ganar dinero": [
@@ -14720,17 +14759,17 @@
      "cómo ganar dinero desde casa",
      "cómo ganar dinero viendo videos",
      "cómo ganar dinero en facebook",
-     "cómo ganar dinero por internet sin invertir",
      "cómo ganar dinero sin invertir",
-     "cómo ganar dinero en youtube"
+     "cómo ganar dinero en youtube",
+     "cómo ganar dinero en telegram"
     ],
     "inteligencia artificial para": [
      "inteligencia artificial para crear imagenes",
      "inteligencia artificial para crear videos",
      "inteligencia artificial para decorar interiores gratis",
      "inteligencia artificial para abogados gratis colombia",
-     "inteligencia artificial para hacer presentaciones en power point",
      "inteligencia artificial para crear imágenes gratis",
+     "inteligencia artificial para hacer presentaciones en power point",
      "inteligencia artificial para crear invitaciones gratis",
      "inteligencia artificial para redactar textos gratis",
      "inteligencia artificial para hacer diapositivas",
@@ -14742,11 +14781,11 @@
      "marketing digital carrera",
      "marketing digital que es y como funciona",
      "marketing digital curso",
-     "marketing digital medellin",
      "marketing digital curso gratuito",
-     "marketing digital universidades bogotá",
      "marketing digital curso sena",
-     "marketing digital universidades en colombia"
+     "marketing digital universidades en colombia",
+     "marketing digital virtual",
+     "marketing digital sena virtual"
     ]
    },
    "ES": {
@@ -14754,13 +14793,13 @@
      "curso de carretillero",
      "curso de manipulador de alimentos",
      "curso de monitor de ocio y tiempo libre",
+     "curso de electricidad",
      "curso de ingles",
      "curso de prevencion de riesgos laborales",
-     "curso de electricidad",
      "curso de ingles gratis",
      "curso de manipulador de alimentos gratis",
-     "curso de carretillero madrid",
-     "curso de vigilante de seguridad"
+     "curso de vigilante de seguridad",
+     "curso de fontaneria"
     ],
     "cómo ganar dinero": [
      "cómo ganar dinero desde casa",
@@ -14772,7 +14811,7 @@
      "cómo ganar dinero sin trabajar",
      "cómo ganar dinero con la ia",
      "cómo ganar dinero viendo vídeos de tiktok",
-     "cómo ganar dinero en gta v"
+     "cómo ganar dinero en youtube"
     ],
     "inteligencia artificial para": [
      "inteligencia artificial para crear imagenes",
@@ -14792,29 +14831,29 @@
      "marketing digital curso gratuito",
      "marketing digital carrera",
      "marketing digital trabajo",
-     "marketing digital curso sepe",
      "marketing digital que es y para que sirve",
+     "marketing digital curso sepe",
      "marketing digital con ia",
-     "marketing digital master",
-     "marketing digital que es y como funciona"
+     "marketing digital que es y como funciona",
+     "marketing digital online"
     ]
    },
    "AR": {
     "curso de": [
-     "curso de manipulación de alimentos",
      "curso de seguridad vial",
-     "curso de manipulación de alimentos online gratis",
-     "curso de electricista matriculado",
-     "curso de barista",
-     "curso de marketing digital",
-     "curso de electricidad",
+     "curso de manipulación de alimentos",
      "curso de oratoria",
      "curso de excel",
-     "curso de manipulación de alimentos caba"
+     "curso de marketing digital",
+     "curso de electricidad",
+     "curso de ingles",
+     "curso de manipulación de alimentos online gratis",
+     "curso de community manager",
+     "curso de wanda nara"
     ],
     "cómo ganar dinero": [
-     "cómo ganar dinero en internet",
      "cómo ganar dinero",
+     "cómo ganar dinero en internet",
      "cómo ganar dinero desde casa",
      "cómo ganar dinero con tiktok",
      "cómo ganar dinero con mercado pago",
@@ -14822,18 +14861,18 @@
      "cómo ganar dinero sin invertir",
      "cómo ganar dinero en youtube",
      "cómo ganar dinero con la ia",
-     "cómo ganar dinero sin trabajar"
+     "cómo ganar dinero desde casa sin invertir"
     ],
     "inteligencia artificial para": [
      "inteligencia artificial para crear imagenes",
      "inteligencia artificial para hacer flyers gratis",
-     "inteligencia artificial para decorar interiores gratis",
      "inteligencia artificial para estudiar",
+     "inteligencia artificial para decorar interiores gratis",
      "inteligencia artificial para hacer videos",
      "inteligencia artificial para crear planos de casas gratis",
-     "inteligencia artificial para abogados",
-     "inteligencia artificial para hacer presentaciones en power point",
      "inteligencia artificial para crear invitaciones gratis",
+     "inteligencia artificial para hacer presentaciones en power point",
+     "inteligencia artificial para abogados",
      "inteligencia artificial para crear imágenes gratis"
     ],
     "marketing digital": [
@@ -14841,33 +14880,33 @@
      "marketing digital carrera",
      "marketing digital curso",
      "marketing digital curso gratuito",
-     "marketing digital utn",
      "marketing digital que es y como funciona",
+     "marketing digital utn",
      "marketing digital carrera gratis",
-     "marketing digital mendoza",
-     "marketing digital carrera uba",
-     "marketing digital tucuman"
+     "marketing digital gratis",
+     "marketing digital donde estudiar",
+     "marketing digital trabajo"
     ]
    },
    "PE": {
     "curso de": [
      "curso de actualización de la normativa de transporte y tránsito",
      "curso de excel",
-     "curso de ia",
      "curso de ingles",
+     "curso de ia",
+     "curso de gestion publica",
      "curso de power bi",
      "curso de inteligencia artificial",
-     "curso de gestion publica",
-     "curso de marketing digital",
-     "curso de seguridad vial",
-     "curso de claude"
+     "curso de ofimatica",
+     "curso de autocad",
+     "curso de marketing digital"
     ],
     "cómo ganar dinero": [
      "cómo ganar dinero",
      "cómo ganar dinero por internet",
      "cómo ganar dinero en tiktok",
-     "cómo ganar dinero en yape",
      "cómo ganar dinero desde casa",
+     "cómo ganar dinero en yape",
      "cómo ganar dinero viendo vídeos en tiktok",
      "cómo ganar dinero viendo videos",
      "cómo ganar dinero en facebook",
@@ -14883,20 +14922,20 @@
      "inteligencia artificial para crear invitaciones gratis",
      "inteligencia artificial para abogados",
      "inteligencia artificial para crear videos",
-     "inteligencia artificial para hacer diapositivas",
-     "inteligencia artificial para redactar textos gratis"
+     "inteligencia artificial para redactar textos gratis",
+     "inteligencia artificial para editar fotos"
     ],
     "marketing digital": [
      "marketing digital",
      "marketing digital carrera",
-     "marketing digital curso",
      "marketing digital que es y como funciona",
-     "marketing digital curso gratis",
-     "marketing digital trabajo",
+     "marketing digital curso",
+     "marketing digital curso gratuito",
      "marketing digital con ia",
      "marketing digital pdf",
-     "marketing digital gratis",
-     "marketing digital ejemplos"
+     "marketing digital en redes sociales y su influencia en el comportamiento de compra del consumidor",
+     "marketing digital ejemplos",
+     "marketing digital universidad"
     ]
    }
   },
@@ -14985,8 +15024,8 @@
     "curso de ventas coursera",
     "curso de marketing coursera",
     "coursera gratis",
-    "coursera gratis unam",
     "coursera gratis para estudiantes",
+    "coursera gratis unam",
     "coursera gratis con correo institucional",
     "coursera gratis tec de monterrey",
     "coursera gratis para estudiantes unam",
