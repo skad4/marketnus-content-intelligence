@@ -1,0 +1,16 @@
+{
+  "_nota": "Catálogo de Marketnus que usa la app para relacionar keywords con cursos y armar el calendario. Edita esta lista cuando agregues los cursos que faltan (son 13 en total). 'semana' es el orden de publicación (1 = semana del 23 nov 2026).",
+  "inicio_publicacion": "2026-11-23",
+  "precio_curso_eur": 9.99,
+  "cursos": [
+    {"id": "td",        "nombre": "Transformación Digital",            "semana": 1,  "gratis": true,  "temas": ["transformación digital", "digitalización", "procesos", "lean", "automatización"]},
+    {"id": "ia",        "nombre": "Negocios Inteligentes con IA",      "semana": 2,  "gratis": false, "temas": ["inteligencia artificial", "ia", "chatgpt", "prompts", "agentes", "automatización con ia"]},
+    {"id": "seo",       "nombre": "SEO",                                "semana": 3,  "gratis": false, "temas": ["seo", "posicionamiento web", "google", "palabras clave"]},
+    {"id": "sem",       "nombre": "SEM y Google Ads",                   "semana": 4,  "gratis": false, "temas": ["sem", "google ads", "publicidad en google", "campañas"]},
+    {"id": "smm",       "nombre": "Social Media Marketing",             "semana": 5,  "gratis": false, "temas": ["redes sociales", "instagram", "tiktok", "community manager", "meta ads"]},
+    {"id": "contenidos","nombre": "Marketing de Contenidos",            "semana": 6,  "gratis": false, "temas": ["marketing de contenidos", "copywriting", "blog", "storytelling"]},
+    {"id": "email",     "nombre": "Email Marketing",                    "semana": 7,  "gratis": false, "temas": ["email marketing", "newsletter", "automatización de correos"]},
+    {"id": "ecommerce", "nombre": "Ecommerce",                          "semana": 8,  "gratis": false, "temas": ["ecommerce", "tienda online", "shopify", "vender por internet"]},
+    {"id": "prog",      "nombre": "Publicidad Programática",            "semana": 9,  "gratis": false, "temas": ["publicidad programática", "compra de medios", "ad tech"]}
+  ]
+}

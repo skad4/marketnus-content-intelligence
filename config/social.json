@@ -1,0 +1,60 @@
+{
+  "_nota": "Hashtags semilla por tema (en español). El pipeline los complementa con TikTok Creative Center cuando responde. 'tamaño' es una estimación: amplio = millones de publicaciones, medio = cientos de miles, nicho = menos.",
+  "hashtags": {
+    "IA aplicada": [
+      {"tag": "#inteligenciaartificial", "tamaño": "amplio"}, {"tag": "#ia", "tamaño": "amplio"}, {"tag": "#chatgpt", "tamaño": "amplio"},
+      {"tag": "#iaparanegocios", "tamaño": "nicho"}, {"tag": "#promptsia", "tamaño": "nicho"}, {"tag": "#agentesdeia", "tamaño": "nicho"},
+      {"tag": "#herramientasia", "tamaño": "medio"}, {"tag": "#productividad", "tamaño": "amplio"}
+    ],
+    "Marketing digital": [
+      {"tag": "#marketingdigital", "tamaño": "amplio"}, {"tag": "#marketing", "tamaño": "amplio"}, {"tag": "#marketingtips", "tamaño": "medio"},
+      {"tag": "#estrategiadigital", "tamaño": "nicho"}, {"tag": "#marketingparaemprendedores", "tamaño": "nicho"}
+    ],
+    "SEO y SEM": [
+      {"tag": "#seo", "tamaño": "amplio"}, {"tag": "#posicionamientoweb", "tamaño": "medio"}, {"tag": "#googleads", "tamaño": "medio"},
+      {"tag": "#seotips", "tamaño": "medio"}, {"tag": "#seoespañol", "tamaño": "nicho"}
+    ],
+    "Redes sociales": [
+      {"tag": "#communitymanager", "tamaño": "medio"}, {"tag": "#redessociales", "tamaño": "amplio"}, {"tag": "#metaads", "tamaño": "medio"},
+      {"tag": "#tipsinstagram", "tamaño": "nicho"}, {"tag": "#creadordecontenido", "tamaño": "medio"}
+    ],
+    "Email y contenidos": [
+      {"tag": "#copywriting", "tamaño": "medio"}, {"tag": "#marketingdecontenidos", "tamaño": "medio"}, {"tag": "#emailmarketing", "tamaño": "medio"},
+      {"tag": "#storytelling", "tamaño": "medio"}
+    ],
+    "Ecommerce": [
+      {"tag": "#ecommerce", "tamaño": "amplio"}, {"tag": "#tiendaonline", "tamaño": "medio"}, {"tag": "#venderporinternet", "tamaño": "nicho"},
+      {"tag": "#negociosonline", "tamaño": "medio"}
+    ],
+    "Transformación digital": [
+      {"tag": "#transformaciondigital", "tamaño": "medio"}, {"tag": "#innovacion", "tamaño": "amplio"}, {"tag": "#leansixsigma", "tamaño": "nicho"},
+      {"tag": "#experienciadelcliente", "tamaño": "nicho"}, {"tag": "#automatizacion", "tamaño": "medio"}
+    ],
+    "Carrera y empleabilidad": [
+      {"tag": "#empleo", "tamaño": "amplio"}, {"tag": "#cv", "tamaño": "medio"}, {"tag": "#marcapersonal", "tamaño": "medio"},
+      {"tag": "#linkedin", "tamaño": "amplio"}, {"tag": "#desarrolloprofesional", "tamaño": "medio"}
+    ],
+    "Emprendimiento": [
+      {"tag": "#emprendimiento", "tamaño": "amplio"}, {"tag": "#emprender", "tamaño": "amplio"}, {"tag": "#ideasdenegocio", "tamaño": "medio"},
+      {"tag": "#negocios", "tamaño": "amplio"}
+    ],
+    "General educación": [
+      {"tag": "#aprendeentiktok", "tamaño": "amplio"}, {"tag": "#aprendecontiktok", "tamaño": "amplio"}, {"tag": "#cursosonline", "tamaño": "medio"},
+      {"tag": "#educaciononline", "tamaño": "medio"}
+    ]
+  },
+  "reglas": {
+    "instagram_max_hashtags": 5,
+    "tiktok_hashtags": "3 a 5",
+    "tiktok_engagement_latam": "En LATAM el engagement de TikTok sube con la duración: 3,63% en videos de menos de 15 s y 4,99% en videos de más de 3 min (Socialinsider, 2025)",
+    "tiktok_engagement_fuente": "https://www.socialinsider.io/es/blog/benchmarks-de-tiktok-para-latam/"
+  },
+  "horarios": {
+    "_nota": "Ventanas sugeridas en hora de Ciudad de México (UTC-6). Ajústalas con tus propias estadísticas cuando tengas 4–6 semanas de datos.",
+    "TikTok": ["Mar 19:00", "Jue 20:00", "Sáb 11:00"],
+    "Instagram": ["Lun 13:00", "Mié 19:00", "Vie 12:00"],
+    "YouTube": ["Jue 18:00", "Dom 10:00"],
+    "LinkedIn": ["Mar 08:00", "Mié 08:00", "Jue 12:00"],
+    "Blog": ["Lun 09:00"]
+  }
+}

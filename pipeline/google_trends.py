@@ -1,0 +1,118 @@
+"""Google Trends (gratis, vía pytrends).
+
+Google Trends compara como máximo 5 términos por consulta y cada consulta usa su
+propia escala 0-100. Para poner todas las keywords en una misma escala se mete una
+keyword ancla en cada lote (como hicimos en el estudio editorial) y se reescala
+cada lote según cuánto vale el ancla en él.
+
+Si Google bloquea la consulta (error 429), el lote se salta y la app sigue usando
+los datos de la semana anterior para esas keywords.
+"""
+from __future__ import annotations
+
+import random
+import time
+from datetime import datetime, timezone
+
+import pandas as pd
+
+ANCHOR = "marketing digital"
+TIMEFRAME = "today 12-m"
+GEO = ""            # mundial: con keywords en español equivale al mundo hispanohablante
+COUNTRIES = {"Mexico": "MX", "Colombia": "CO", "Spain": "ES", "Argentina": "AR", "Peru": "PE",
+             "Chile": "CL", "Ecuador": "EC", "Guatemala": "GT", "El Salvador": "SV",
+             "Dominican Republic": "DO", "Venezuela": "VE", "Bolivia": "BO", "Costa Rica": "CR",
+             "Honduras": "HN", "Panama": "PA", "Paraguay": "PY", "Uruguay": "UY", "United States": "US"}
+RISING_SEEDS = ["curso de", "inteligencia artificial", "marketing digital", "cómo ganar dinero", "cursos gratis"]
+
+
+def _client():
+    from pytrends.request import TrendReq  # import tardío: la app no lo necesita
+    # retries=0: pytrends usa un parámetro de urllib3 que ya no existe; reintentamos nosotros
+    return TrendReq(hl="es-419", tz=360, timeout=(10, 30))
+
+
+def _call(fn, label: str, tries: int = 3):
+    for i in range(tries):
+        try:
+            return fn()
+        except Exception as e:  # noqa: BLE001
+            wait = 30 * (i + 1) + random.uniform(0, 10)
+            print(f"[trends] {label}: {type(e).__name__} {e} -> reintento en {wait:.0f}s")
+            time.sleep(wait)
+    print(f"[trends] {label}: sin datos tras {tries} intentos")
+    return None
+
+
+def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
+    kws = [k for k in dict.fromkeys(keywords) if k and k != ANCHOR]
+    batches = [kws[i:i + 4] for i in range(0, len(kws), 4)]
+    if max_batches:
+        batches = batches[:max_batches]
+    try:
+        py = _client()
+    except Exception as e:  # noqa: BLE001
+        print(f"[trends] pytrends no disponible: {e}")
+        return None
+
+    series: dict[str, dict] = {}
+    regions: dict[str, dict] = {}
+    anchor_ref = None
+    ok = 0
+    for n, batch in enumerate(batches, 1):
+        terms = batch + [ANCHOR]
+        label = f"lote {n}/{len(batches)}"
+        df = _call(lambda: (py.build_payload(terms, timeframe=TIMEFRAME, geo=GEO), py.interest_over_time())[1], label)
+        if df is None or df.empty or ANCHOR not in df.columns:
+            continue
+        df = df.drop(columns=[c for c in ["isPartial"] if c in df.columns])
+        a_mean = float(df[ANCHOR].mean()) or 1.0
+        if anchor_ref is None:
+            anchor_ref = a_mean
+        factor = anchor_ref / a_mean
+        for kw in batch + ([ANCHOR] if ANCHOR not in series else []):
+            if kw in df.columns:
+                series[kw] = {
+                    "dates": [d.strftime("%Y-%m-%d") for d in df.index],
+                    "values": [round(float(v) * factor, 2) for v in df[kw].tolist()],
+                }
+        reg = _call(lambda: py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=False), label)
+        if reg is not None and not reg.empty:
+            reg = reg[[c for c in reg.columns if c in batch]]
+            reg = reg[reg.index.isin(COUNTRIES)]
+            for kw in reg.columns:
+                vals = {COUNTRIES[c]: int(v) for c, v in reg[kw].items() if v > 0}
+                if vals:
+                    regions[kw] = vals
+        ok += 1
+        time.sleep(random.uniform(4, 8))
+
+    rising = []
+    for seed in RISING_SEEDS:
+        rq = _call(lambda: (py.build_payload([seed], timeframe="today 3-m", geo=GEO), py.related_queries())[1],
+                   f"rising {seed}", tries=2)
+        if not rq or seed not in rq or rq[seed].get("rising") is None:
+            continue
+        for _, r in rq[seed]["rising"].head(15).iterrows():
+            rising.append({"seed": seed, "query": str(r["query"]), "value": str(r["value"])})
+        time.sleep(random.uniform(4, 8))
+
+    if ok == 0:
+        return None
+    return {
+        "source": "Google Trends (pytrends)",
+        "anchor": ANCHOR,
+        "timeframe": TIMEFRAME,
+        "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "batches_ok": ok,
+        "batches_total": len(batches),
+        "series": series,
+        "regions": regions,
+        "rising": rising,
+    }
+
+
+if __name__ == "__main__":
+    kw = pd.read_csv("config/keywords.csv")["keyword"].tolist()
+    out = collect(kw, max_batches=1)
+    print(out and {k: v for k, v in out.items() if k not in ("series", "regions")})

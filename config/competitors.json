@@ -1,0 +1,79 @@
+{
+  "_nota": "Datos verificados en la web el 14 nov 2026. Cada dato lleva su fuente. La matriz de cobertura es una evaluación cualitativa (Fuerte / Media / Débil) a partir de los catálogos públicos.",
+  "actualizado": "2026-11-14",
+  "competidores": [
+    {
+      "id": "coursera",
+      "nombre": "Coursera",
+      "color": "#0056D2",
+      "modelo": "Suscripción (Coursera Plus) + certificados de universidades y empresas",
+      "precio": "Coursera Plus: $59/mes o $399/año",
+      "precio_fuente": "https://learn-stack.pages.dev/en/coursera-vs-udemy-reddit-which-is-better-in-2026",
+      "escala": "Desde el 11 may 2026 es una sola empresa con Udemy: 290 millones de estudiantes y más de 315.000 cursos combinados",
+      "escala_fuente": "https://trainingindustry.com/press-release/learning-technologies/coursera-and-udemy-are-now-one-company-creating-the-worlds-most-comprehensive-skills-platform/",
+      "redes": {"instagram": "1,36 M seguidores (altindex)", "fuente": "https://altindex.com/ticker/cour/instagram-followers"},
+      "tendencias": [
+        "Content Creation es la habilidad de IA generativa que más crece",
+        "Pensamiento crítico: +168% de inscripciones en el área de datos",
+        "IA responsable y privacidad de la información entran al top 10",
+        "Certificados profesionales: inscripciones +91% de media"
+      ],
+      "tendencias_fuente": "https://www.fenews.co.uk/skills/demand-for-critical-thinking-skills-surges-up-to-185-as-human-judgement-becomes-central-skill-for-todays-workers",
+      "fortalezas": ["Marca universitaria y certificados de Google, IBM, Meta", "Catálogo enorme", "Búsquedas de 'cursos gratis con certificado'"],
+      "debilidades": ["Contenido traducido, poco hecho para LATAM", "Engagement muy bajo en redes", "Precio alto para el mercado hispano"]
+    },
+    {
+      "id": "udemy",
+      "nombre": "Udemy",
+      "color": "#A435F0",
+      "modelo": "Marketplace de cursos sueltos + Personal Plan (suscripción)",
+      "precio": "Personal Plan desde $13/mes; cursos sueltos casi siempre en oferta",
+      "precio_fuente": "https://edubracket.com/articles/cheapest-unlimited-online-course-subscriptions-2026",
+      "escala": "Más de 250.000 cursos en el marketplace; ahora parte de Coursera",
+      "escala_fuente": "https://www.itechguides.com/?p=350685",
+      "redes": {"instagram": "3,68 M seguidores (altindex)", "fuente": "https://altindex.com/ticker/cour/instagram-followers"},
+      "tendencias": [
+        "Microsoft Copilot +3.400% (habilidad de negocio que más crece)",
+        "Agentes de IA: la habilidad nueva de IA más consumida",
+        "Excel y ChatGPT para negocios: las dos habilidades de negocio más consumidas",
+        "Canva +62% y generación de arte con IA +131%"
+      ],
+      "tendencias_fuente": "https://www.crn.in/?p=73303",
+      "fortalezas": ["Precio por curso muy bajo", "Muchos cursos prácticos en español", "Fuerte en programación y herramientas"],
+      "debilidades": ["Calidad muy variable entre instructores", "Sin comunidad ni seguimiento", "Marca del instructor, no de la plataforma"]
+    },
+    {
+      "id": "platzi",
+      "nombre": "Platzi",
+      "color": "#13B866",
+      "modelo": "Suscripción anual (Basic, Expert, Expert Duo, Groups) con escuelas y rutas",
+      "precio": "Expert: $49/mes o $329/año (precio de lista, jul 2026); promociones frecuentes",
+      "precio_fuente": "https://visualping.io/pages/platzi-pricing-alerts-4896156",
+      "escala": "Más de 1.900 cursos y 17 escuelas; las más populares son IA, Desarrollo Web, Marketing e Inglés",
+      "escala_fuente": "https://platzi.com/blog/producto-exitoso",
+      "redes": {"instagram": "710 mil seguidores, engagement 1,3%–2,9% (HypeAuditor, jul 2026)", "fuente": "https://hypeauditor.com/es/instagram/platzi/"},
+      "tendencias": [
+        "Empuja cursos de IA por herramienta: ChatGPT, Gemini, Claude, Prompt Engineering",
+        "Platzi Day: todo el catálogo gratis 3 días (la última fue 6–8 nov 2026)",
+        "Un TikTok sobre sus cursos gratis llegó a 13 millones de vistas",
+        "Contenido con cara a cámara, comunidad y eventos (Platzi Conf)"
+      ],
+      "tendencias_fuente": "https://platzi.com/cursos/estrategia-tiktok/por-que-deberias-estar-en-tiktok/",
+      "fortalezas": ["Hecho para LATAM, en español nativo", "Comunidad y marca fuerte", "Mucho volumen de contenido en redes"],
+      "debilidades": ["Suscripción anual cara para quien quiere un solo tema", "Comentarios de usuarios: cursos básicos, poca profundidad", "Poco en procesos, CX y transformación de negocio"]
+    }
+  ],
+  "cobertura_temas": ["IA generativa y prompts", "Agentes de IA", "Marketing digital", "SEO", "SEM / Google Ads", "Redes sociales", "Email marketing", "Ecommerce", "Publicidad programática", "Transformación digital", "CX / experiencia del cliente", "Lean / procesos", "Gestión de proyectos", "Excel y datos", "Programación", "Inglés", "Marca personal y CV"],
+  "cobertura": {
+    "coursera":  ["Fuerte", "Fuerte", "Fuerte", "Media", "Fuerte", "Media", "Media", "Media", "Débil", "Media", "Media", "Media", "Fuerte", "Fuerte", "Fuerte", "Media", "Media"],
+    "udemy":     ["Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Media", "Fuerte", "Débil", "Débil", "Débil", "Media", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Media"],
+    "platzi":    ["Fuerte", "Media", "Fuerte", "Media", "Media", "Fuerte", "Media", "Media", "Débil", "Débil", "Débil", "Débil", "Media", "Media", "Fuerte", "Fuerte", "Media"],
+    "marketnus": ["Media", "Media", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Fuerte", "Media", "Débil", "Débil", "Débil", "Fuerte"]
+  },
+  "posicionamiento_marketnus": [
+    "Especialista, no supermercado: marketing digital + IA + transformación de negocio",
+    "Un experto real con cara y voz (10+ años en CX/UX y Lean Six Sigma, casos de Visa, Mastercard, Giftcards.com)",
+    "Español nativo pensado para LATAM, no traducido",
+    "Precio por curso (€9,99) frente a suscripciones de $329–$399 al año"
+  ]
+}
