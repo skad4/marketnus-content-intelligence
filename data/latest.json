@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T17:48:34+00:00",
+ "updated_at": "2026-11-14T17:55:37+00:00",
  "status": {
   "trends": "ok",
   "autocomplete": "ok",
@@ -10,7 +10,7 @@
   "geo": "MX",
   "anchor": "marketing digital",
   "timeframe": "today 12-m",
-  "fetched_at": "2026-11-14T17:46:20+00:00",
+  "fetched_at": "2026-11-14T17:53:35+00:00",
   "batches_ok": 25,
   "batches_total": 25,
   "series": {
@@ -683,7 +683,7 @@
      0.0,
      0.0,
      0.0,
-     0.0
+     1.0
     ]
    },
    "cómo usar chatgpt": {
@@ -907,7 +907,7 @@
      4.0,
      5.0,
      4.0,
-     4.0
+     3.0
     ]
    },
    "prompt engineering": {
@@ -1803,7 +1803,7 @@
      109.85,
      103.26,
      103.26,
-     108.75
+     109.85
     ]
    },
    "copilot microsoft cómo usar": {
@@ -11015,28 +11015,8 @@
    },
    {
     "seed": "curso de",
-    "query": "elias lara flores primer curso de contabilidad",
-    "value": "100"
-   },
-   {
-    "seed": "curso de",
-    "query": "curso de mixologia",
-    "value": "90"
-   },
-   {
-    "seed": "curso de",
     "query": "curso de contabilidad para no contadores",
     "value": "70"
-   },
-   {
-    "seed": "curso de",
-    "query": "ops cursos",
-    "value": "60"
-   },
-   {
-    "seed": "curso de",
-    "query": "escuela de buen gobierno",
-    "value": "60"
    },
    {
     "seed": "curso de",
@@ -11046,11 +11026,6 @@
    {
     "seed": "curso de",
     "query": "curso de ingles unam",
-    "value": "50"
-   },
-   {
-    "seed": "curso de",
-    "query": "curso de corte y confeccion",
     "value": "50"
    },
    {
@@ -11065,11 +11040,6 @@
    },
    {
     "seed": "inteligencia artificial",
-    "query": "alineación de la inteligencia artificial",
-    "value": "250"
-   },
-   {
-    "seed": "inteligencia artificial",
     "query": "auge de la inteligencia artificial",
     "value": "180"
    },
@@ -11080,17 +11050,12 @@
    },
    {
     "seed": "inteligencia artificial",
-    "query": "la inteligencia artificial pelicula",
-    "value": "120"
-   },
-   {
-    "seed": "inteligencia artificial",
-    "query": "agente de inteligencia artificial",
-    "value": "90"
-   },
-   {
-    "seed": "inteligencia artificial",
     "query": "concepto de inteligencia artificial",
+    "value": "60"
+   },
+   {
+    "seed": "inteligencia artificial",
+    "query": "quien invento la inteligencia artificial",
     "value": "60"
    },
    {
@@ -11110,23 +11075,18 @@
    },
    {
     "seed": "inteligencia artificial",
-    "query": "el impacto de la inteligencia artificial",
-    "value": "50"
-   },
-   {
-    "seed": "inteligencia artificial",
-    "query": "a.i. inteligencia artificial",
-    "value": "50"
-   },
-   {
-    "seed": "inteligencia artificial",
     "query": "impacto de la inteligencia artificial en la educación",
     "value": "50"
    },
    {
     "seed": "inteligencia artificial",
-    "query": "película inteligencia artificial",
-    "value": "40"
+    "query": "pelicula de inteligencia artificial",
+    "value": "50"
+   },
+   {
+    "seed": "inteligencia artificial",
+    "query": "desventajas de la inteligencia artificial",
+    "value": "50"
    },
    {
     "seed": "inteligencia artificial",
@@ -11135,7 +11095,7 @@
    },
    {
     "seed": "inteligencia artificial",
-    "query": "crear videos con inteligencia artificial gratis",
+    "query": "inteligencia artificial película",
     "value": "40"
    },
    {
@@ -11145,13 +11105,13 @@
    },
    {
     "seed": "marketing digital",
-    "query": "consultoria en marketing digital",
-    "value": "11050"
+    "query": "agencia de marketing digital en tijuana",
+    "value": "1300"
    },
    {
     "seed": "marketing digital",
     "query": "consultora marketing digital",
-    "value": "1200"
+    "value": "1250"
    },
    {
     "seed": "marketing digital",
@@ -11182,11 +11142,6 @@
     "seed": "marketing digital",
     "query": "agencia de marketing digital monterrey",
     "value": "250"
-   },
-   {
-    "seed": "marketing digital",
-    "query": "tipos de marketing digital",
-    "value": "60"
    },
    {
     "seed": "marketing digital",
@@ -11225,13 +11180,18 @@
    },
    {
     "seed": "cursos gratis",
-    "query": "cursos gratis capacitate para el empleo carlos slim",
-    "value": "2100"
+    "query": "cursos de inteligencia artificial gratis en español",
+    "value": "10350"
    },
    {
     "seed": "cursos gratis",
-    "query": "instituto rey sejong cursos gratis",
-    "value": "800"
+    "query": "cursos gratuitos del gobierno con certificado",
+    "value": "9000"
+   },
+   {
+    "seed": "cursos gratis",
+    "query": "cursos de sap gratis con certificado",
+    "value": "3200"
    },
    {
     "seed": "cursos gratis",
@@ -11247,12 +11207,17 @@
     "seed": "cursos gratis",
     "query": "cursos gratis en linea con certificado",
     "value": "90"
+   },
+   {
+    "seed": "cursos gratis",
+    "query": "cursos de excel gratis con certificado",
+    "value": "40"
    }
   ]
  },
  "autocomplete": {
   "source": "Google y YouTube autocompletado",
-  "fetched_at": "2026-11-14T17:48:25+00:00",
+  "fetched_at": "2026-11-14T17:55:28+00:00",
   "calls": 433,
   "google": {
    "curso de inteligencia artificial": [
@@ -12355,7 +12320,11 @@
     "como hacer que chatgpt lea en voz alta"
    ],
    "mejor curso de chatgpt": [
-    "el mejor curso de chatgpt"
+    "el mejor curso de chatgpt",
+    "curso gratis de chatgpt",
+    "mejor uso de chatgpt",
+    "curso completo de chatgpt",
+    "mejores funciones de chatgpt"
    ],
    "curso de agentes de ia": [
     "curso de agentes de ia",
@@ -14462,10 +14431,10 @@
     "youtube": 10,
     "google_top": [
      "trabajos remotos",
-     "trabajos remotos desde casa",
      "trabajos remotos en español",
      "trabajos remotos cdmx",
-     "trabajos remotos mexico"
+     "trabajos remotos mexico",
+     "trabajos remotos desde casa en español"
     ],
     "youtube_top": [
      "trabajos remotos sin experiencia",
