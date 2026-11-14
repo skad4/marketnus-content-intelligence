@@ -82,13 +82,12 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
                     "values": [round(float(v) * factor, 2) for v in df[kw].tolist()],
                 }
         reg = _call(lambda: (py.build_payload(batch, timeframe=TIMEFRAME, geo=REGION_GEO),
-                             py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=False))[1],
+                             py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=True))[1],
                     label, tries=2)
-        if reg is not None and not reg.empty:
-            reg = reg[[c for c in reg.columns if c in batch]]
-            reg = reg[reg.index.isin(COUNTRIES)]
-            for kw in reg.columns:
-                vals = {COUNTRIES[c]: int(v) for c, v in reg[kw].items() if v > 0}
+        if reg is not None and not reg.empty and "geoCode" in reg.columns:
+            reg = reg[reg["geoCode"].isin(COUNTRIES.values())].set_index("geoCode")
+            for kw in [c for c in reg.columns if c in batch]:
+                vals = {cc: int(v) for cc, v in reg[kw].items() if v > 0}
                 if vals:
                     regions[kw] = vals
         ok += 1
