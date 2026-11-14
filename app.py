@@ -72,6 +72,104 @@ if st.session_state.get("uploaded_series"):
 courses = load_json("courses.json")
 competitors = load_json("competitors.json")
 social = load_json("social.json")
+instagram = load_json("instagram.json")
+
+
+def fmt_n(n: float) -> str:
+    if n >= 1_000_000:
+        return f"{n / 1_000_000:.1f}".replace(".", ",").replace(",0", "") + " M"
+    if n >= 1_000:
+        return f"{n / 1_000:.0f} K"
+    return f"{n:,.0f}".replace(",", ".")
+
+
+def ig_section(data: dict) -> None:
+    """Comparativa de Instagram: Marketnus (@marketnuss) contra Coursera, Udemy y Platzi."""
+    df = pd.DataFrame(data["cuentas"])
+    df["tasa"] = df["eng_medio"] / df["seguidores"] * 100
+    df["com_rate"] = df["comentarios_medio"] / df["seguidores"] * 100
+    mk = df[df["marca"] == "Marketnus"].iloc[0]
+    rivals = df[df["marca"] != "Marketnus"]
+    ui.head("Instagram", "Marketnus vs competencia en Instagram",
+            f"Perfiles públicos leídos el {data['capturado']}. Engagement = me gusta + comentarios por publicación, "
+            "promedio de las publicaciones recientes con contador visible. Tasa = engagement medio ÷ seguidores.")
+
+    best_rival = rivals.sort_values("tasa", ascending=False).iloc[0]
+    c = st.columns(4)
+    c[0].markdown(ui.stat("Seguidores @marketnuss", fmt_n(mk["seguidores"]),
+                          f"Platzi tiene {rivals.loc[rivals.marca == 'Platzi', 'seguidores'].iloc[0] / mk['seguidores']:,.0f}× más".replace(",", "."),
+                          accent=True), unsafe_allow_html=True)
+    c[1].markdown(ui.stat("Tasa de engagement", f"{mk['tasa']:.1f}".replace(".", ","), 
+                          f"{best_rival['marca']}: {best_rival['tasa']:.2f}%".replace(".", ","), unit="%"), unsafe_allow_html=True)
+    c[2].markdown(ui.stat("Interacciones por post", f"{mk['eng_medio']:.0f}",
+                          f"Platzi {rivals.loc[rivals.marca == 'Platzi', 'eng_medio'].iloc[0]:.0f} · Udemy {rivals.loc[rivals.marca == 'Udemy', 'eng_medio'].iloc[0]:.0f}"),
+                  unsafe_allow_html=True)
+    c[3].markdown(ui.stat("Ritmo de publicación", f"{mk['por_semana']:.1f}".replace(".", ","),
+                          f"último post {mk['ultima']} · Coursera 2,8/sem · Udemy 8,8/sem", unit="/sem"), unsafe_allow_html=True)
+    st.write("")
+
+    order = ["Marketnus", "Platzi", "Coursera", "Udemy"]
+    view = st.segmented_control("Métrica", ["Seguidores", "Tasa de engagement", "Interacciones por post", "Comentarios por post"],
+                                default="Tasa de engagement", key="ig_metric")
+    col = {"Seguidores": "seguidores", "Tasa de engagement": "tasa", "Interacciones por post": "eng_medio",
+           "Comentarios por post": "comentarios_medio"}[view or "Tasa de engagement"]
+    d = df.set_index("marca").loc[order].reset_index()
+    labels = [fmt_n(v) if col == "seguidores" else (f"{v:.2f}%".replace(".", ",") if col == "tasa" else f"{v:.0f}") for v in d[col]]
+    fig = go.Figure(go.Bar(x=d["marca"], y=d[col], text=labels, textposition="outside",
+                           marker_color=[ui.BRAND_COLORS[m] for m in d["marca"]],
+                           hovertemplate="%{x}: %{text}<extra></extra>"))
+    if col in ("seguidores", "tasa"):
+        fig.update_yaxes(type="log", showticklabels=False)
+    fig.update_xaxes(title=None)
+    fig.update_yaxes(title=None)
+    a, b = st.columns([1.15, 1])
+    with a:
+        st.plotly_chart(ui.fig_style(fig, 320, legend=False), width="stretch", config=ui.CHART_CFG)
+        if col in ("seguidores", "tasa"):
+            st.markdown('<div class="small">Escala logarítmica: las diferencias son de varios órdenes de magnitud.</div>',
+                        unsafe_allow_html=True)
+    with b:
+        t = d.assign(
+            Cuenta=lambda x: "@" + x["handle"],
+            Seguidores=lambda x: x["seguidores"].map(fmt_n),
+            Publicaciones=lambda x: x["publicaciones"].map(lambda v: f"{v:,}".replace(",", ".")),
+            Tasa=lambda x: x["tasa"].map(lambda v: f"{v:.2f}%".replace(".", ",")),
+            Interacciones=lambda x: x["eng_medio"].round(0).astype(int),
+            Comentarios=lambda x: x["comentarios_medio"].round(0).astype(int),
+            Ritmo=lambda x: [r.get("frecuencia_texto") or (f"{r['por_semana']:.1f}/sem".replace(".", ",")) for _, r in x.iterrows()],
+            Muestra=lambda x: x["muestra"].astype(str) + " posts",
+        )[["marca", "Cuenta", "Seguidores", "Publicaciones", "Tasa", "Interacciones", "Comentarios", "Ritmo", "Muestra"]]
+        st.dataframe(t.rename(columns={"marca": "Marca"}), hide_index=True, width="stretch")
+
+    ui.head("Qué les funciona", "Engagement por tipo de contenido",
+            "Promedio de interacciones por publicación según el tema del post (clasificado por palabras clave del texto).")
+    rows = [{"marca": a["marca"], "pilar": p, "posts": a["mix"][p], "eng": a["mix_eng"][p]}
+            for a in data["cuentas"] for p in a["mix"]]
+    pdf = pd.DataFrame(rows)
+    fig2 = px.bar(pdf, x="eng", y="pilar", color="marca", orientation="h", barmode="group",
+                  color_discrete_map=ui.BRAND_COLORS, custom_data=["posts"],
+                  category_orders={"marca": order})
+    fig2.update_traces(hovertemplate="%{y}: %{x:.0f} interacciones · %{customdata[0]} posts<extra></extra>")
+    fig2.update_xaxes(title="Interacciones por post", type="log")
+    fig2.update_yaxes(title=None)
+    st.plotly_chart(ui.fig_style(fig2, 330), width="stretch", config=ui.CHART_CFG)
+
+    p_ia = data["cuentas"][[x["marca"] for x in data["cuentas"]].index("Platzi")]["mix_eng"]
+    ratio = p_ia["IA y herramientas"] / p_ia["Promoción y precios"]
+    ui.insight(f"{mk['tasa']:.1f}%".replace(".", ","),
+               f"<b>Tu comunidad es la más activa en proporción</b> ({mk['tasa']:.1f}% vs {best_rival['tasa']:.2f}% de {best_rival['marca']}), "
+               f"pero el alcance es mínimo: {mk['seguidores']:.0f} seguidores y {mk['por_semana']:.1f} posts por semana. "
+               "La tasa alta es normal en cuentas pequeñas; el cuello de botella es el volumen y la constancia.")
+    ui.insight(f"{ratio:.0f}×",
+               f"En Platzi, los posts de <b>IA y herramientas</b> logran {ratio:.0f} veces más interacción que los de promoción "
+               f"({p_ia['IA y herramientas']:,.0f} vs {p_ia['Promoción y precios']:,.0f}). 3 de tus 5 posts recientes son promocionales: "
+               "cambia la mezcla hacia tips de IA aplicada y deja la promo para 1 de cada 4 publicaciones.")
+    ui.insight("3/sem",
+               "Meta mínima para salir de la invisibilidad: <b>3 publicaciones por semana</b> (Coursera publica ~2,8 con 2 M de seguidores). "
+               "Los Reels de la pestaña Calendario ya están listos para cubrir ese ritmo.")
+    ui.note("Muestra pequeña: algunas cuentas ocultan los me gusta (Udemy en 7 de 12 posts), así que el promedio usa solo los visibles. "
+            "Para actualizar, corre <code>tools/ig_scan.js</code> en Chrome con sesión iniciada y pega el resultado en "
+            "<code>config/instagram.json</code>.")
 kw = build_keywords(latest)
 prev_hist = load_history()
 has_trends = (kw["fuente"] == "Google Trends").any()
@@ -417,6 +515,9 @@ with T[3]:
             st.markdown('<div class="small">Se llena con el autocompletado en la próxima actualización.</div>', unsafe_allow_html=True)
 
     st.write("")
+    ig_section(instagram)
+
+    st.write("")
     ui.head("Cobertura", "Quién enseña qué", "Evaluación cualitativa de los catálogos públicos. Los huecos marcados son temas donde Marketnus es fuerte y la competencia no.")
     topics = competitors["cobertura_temas"]
     lv = {"Fuerte": 3, "Media": 2, "Débil": 1}
@@ -558,6 +659,8 @@ with T[7]:
          "Preguntas reales que la gente escribe; amplitud de cada keyword; búsquedas de marca de la competencia."),
         ("TikTok Creative Center", tt.get("fetched_at"), stt.get("tiktok"), "Hashtags populares por país (cuando el servicio responde)."),
         ("Competencia", competitors["actualizado"], "manual", "Precios, escala, redes y tendencias con enlace a cada fuente."),
+        ("Instagram (perfiles públicos)", instagram["capturado"], "manual",
+         "Seguidores, interacciones por post, ritmo y temas de @marketnuss, @platzi, @coursera y @udemy (tools/ig_scan.js)."),
     ]
     st.dataframe(pd.DataFrame(srcs, columns=["Fuente", "Última lectura", "Estado", "Qué aporta"]).fillna("—"),
                  hide_index=True, width="stretch")

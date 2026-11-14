@@ -1,0 +1,26 @@
+{
+  "_nota": "Captura de perfiles públicos de Instagram hecha en Chrome con sesión iniciada (tools/ig_scan.js). Engagement = me gusta + comentarios por publicación, en las últimas publicaciones con contador visible. Tasa de engagement = engagement medio / seguidores. Se actualiza a pedido, no automáticamente.",
+  "capturado": "2026-11-14",
+  "cuentas": [
+    {"marca": "Marketnus", "handle": "marketnuss", "seguidores": 88, "siguiendo": 1, "publicaciones": 10,
+     "muestra": 5, "muestra_vista": 10, "reels": 1, "eng_medio": 6, "comentarios_medio": 0, "eng_reel": 5, "eng_post": 6,
+     "por_semana": 0.2, "ultima": "2026-10-17",
+     "mix": {"Promoción y precios": 3, "Tips y tutoriales": 1, "Otros": 1},
+     "mix_eng": {"Promoción y precios": 6, "Tips y tutoriales": 5, "Otros": 8}},
+    {"marca": "Platzi", "handle": "platzi", "seguidores": 735000, "siguiendo": 302, "publicaciones": 3723,
+     "muestra": 7, "muestra_vista": 11, "reels": 1, "eng_medio": 914, "comentarios_medio": 14, "eng_reel": 1166, "eng_post": 872,
+     "por_semana": null, "ultima": "2026-11-13", "frecuencia_texto": "Varias por día",
+     "mix": {"IA y herramientas": 2, "Promoción y precios": 5},
+     "mix_eng": {"IA y herramientas": 2003, "Promoción y precios": 479}},
+    {"marca": "Coursera", "handle": "coursera", "seguidores": 2000000, "siguiendo": 578, "publicaciones": 2060,
+     "muestra": 4, "muestra_vista": 12, "reels": 1, "eng_medio": 249, "comentarios_medio": 16, "eng_reel": 170, "eng_post": 275,
+     "por_semana": 2.8, "ultima": "2026-11-12",
+     "mix": {"Carrera y empleo": 2, "Promoción y precios": 1, "IA y herramientas": 1},
+     "mix_eng": {"Carrera y empleo": 252, "Promoción y precios": 389, "IA y herramientas": 104}},
+    {"marca": "Udemy", "handle": "udemy", "seguidores": 4000000, "siguiendo": 214, "publicaciones": 1574,
+     "muestra": 5, "muestra_vista": 12, "reels": 2, "eng_medio": 555, "comentarios_medio": 8, "eng_reel": 85, "eng_post": 869,
+     "por_semana": 8.8, "ultima": "2026-11-09",
+     "mix": {"Carrera y empleo": 1, "Otros": 4},
+     "mix_eng": {"Carrera y empleo": 32, "Otros": 686}}
+  ]
+}

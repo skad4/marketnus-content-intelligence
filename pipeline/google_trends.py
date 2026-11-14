@@ -25,6 +25,11 @@ COUNTRIES = {"Mexico": "MX", "Colombia": "CO", "Spain": "ES", "Argentina": "AR",
              "Chile": "CL", "Ecuador": "EC", "Guatemala": "GT", "El Salvador": "SV",
              "Dominican Republic": "DO", "Venezuela": "VE", "Bolivia": "BO", "Costa Rica": "CR",
              "Honduras": "HN", "Panama": "PA", "Paraguay": "PY", "Uruguay": "UY", "United States": "US"}
+ES_NAMES = {"MX": "méxico", "CO": "colombia", "ES": "españa", "AR": "argentina", "PE": "perú", "CL": "chile",
+            "EC": "ecuador", "GT": "guatemala", "SV": "el salvador", "DO": "república dominicana", "VE": "venezuela",
+            "BO": "bolivia", "CR": "costa rica", "HN": "honduras", "PA": "panamá", "PY": "paraguay", "UY": "uruguay",
+            "US": "estados unidos"}
+NAME_TO_CODE = {**{k.lower(): v for k, v in COUNTRIES.items()}, **{v: k for k, v in ES_NAMES.items()}}
 RELEVANT = {"curso", "cursos", "ia", "inteligencia", "artificial", "marketing", "chatgpt", "gemini", "claude", "agente",
             "agentes", "prompts", "seo", "ads", "tiktok", "instagram", "negocio", "dinero", "certificado", "gratis",
             "aprender", "ventas", "emprender", "digital", "online", "trabajo", "excel", "copilot"}
@@ -84,8 +89,15 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
         reg = _call(lambda: (py.build_payload(batch, timeframe=TIMEFRAME, geo=REGION_GEO),
                              py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=True))[1],
                     label, tries=2)
-        if reg is not None and not reg.empty and "geoCode" in reg.columns:
-            reg = reg[reg["geoCode"].isin(COUNTRIES.values())].set_index("geoCode")
+        if n <= 2:
+            print(f"[trends] regiones lote {n}: {None if reg is None else (reg.shape, list(reg.columns)[:6], list(reg.index)[:3])}")
+        if reg is not None and not reg.empty:
+            if "geoCode" in reg.columns and reg["geoCode"].isin(COUNTRIES.values()).any():
+                reg = reg[reg["geoCode"].isin(COUNTRIES.values())].set_index("geoCode")
+            else:  # sin código ISO: mapear por nombre (inglés o español)
+                codes = reg.index.to_series().map(lambda n: NAME_TO_CODE.get(str(n).strip().lower()))
+                reg = reg[codes.notna().values].set_axis(codes.dropna().values, axis=0)
+                reg = reg.drop(columns=[c for c in ["geoCode"] if c in reg.columns])
             for kw in [c for c in reg.columns if c in batch]:
                 vals = {cc: int(v) for cc, v in reg[kw].items() if v > 0}
                 if vals:
