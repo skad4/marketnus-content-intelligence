@@ -308,7 +308,8 @@ with T[2]:
             rows += [{"fecha": d, "cluster": r["cluster"], "keyword": r["keyword"], "v": x} for d, x in zip(s["dates"], s["values"])]
         long = pd.DataFrame(rows)
         long["fecha"] = pd.to_datetime(long["fecha"])
-        ui.head("Tendencias", "Interés semanal por tema", "Suma del interés de las keywords de cada tema, en escala común (keyword ancla: «"
+        ui.head("Tendencias", "Interés semanal por tema", "Suma del interés de las keywords de cada tema en Google Trends "
+                + ("México" if trends.get("geo", "MX") == "MX" else ui.esc(trends.get("geo", ""))) + ", en escala común (keyword ancla: «"
                 + ui.esc(trends.get("anchor", "")) + "»).")
         by_c = long.groupby(["fecha", "cluster"], as_index=False)["v"].sum()
         pick = st.multiselect("Temas", sorted(by_c["cluster"].unique()), default=sorted(by_c["cluster"].unique())[:5],
@@ -563,8 +564,8 @@ with T[7]:
 
     ui.head("Cómo se calcula", "Métricas")
     st.markdown(
-        "- **Demanda (0–100):** promedio de 12 meses en Google Trends, llevado a escala común con la keyword ancla «marketing digital» "
-        "y comprimido con raíz cuadrada para que las keywords de nicho no queden en cero. Si aún no hay datos, se usa una estimación inicial.\n"
+        "- **Demanda (0–100):** promedio de 12 meses en Google Trends México (el mayor mercado hispano; el mapa por país sí es mundial), llevado a escala común con la keyword ancla «marketing digital» "
+        "y comprimido con raíz cuadrada. Si Trends redondea a 0 una keyword que el buscador sí sugiere, recibe un piso de 4–20 según cuántas variantes sugiere (fuente: «Autocompletado (volumen bajo)»).\n"
         "- **Momentum:** interés de las últimas 12 semanas contra las 12 anteriores.\n"
         "- **Dificultad (KD):** estimación según lo genérica que es la keyword (cuanto más corta y amplia, más difícil) "
         "y si aparece en las búsquedas de marca de Coursera, Udemy o Platzi (+10).\n"

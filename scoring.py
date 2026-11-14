@@ -112,6 +112,13 @@ def build_keywords(latest: dict | None) -> pd.DataFrame:
     else:
         df["demanda"] = df["est_demanda"]
     df["demanda"] = df["demanda"].astype(float)
+    # Trends redondea a 0 los volúmenes chicos. Si el buscador igual sugiere variantes,
+    # la keyword sí se busca: piso bajo según cuántas sugerencias devuelve (máx. 20).
+    sug = df["keyword"].map(lambda k: (breadth.get(k) or {}).get("google") or 0)
+    low = (df["fuente"] == "Google Trends") & (df["demanda"] < 8)
+    floor = (4 + 1.6 * sug).clip(upper=20)
+    df.loc[low & (sug > 0), "fuente"] = "Autocompletado (volumen bajo)"
+    df.loc[low, "demanda"] = np.maximum(df.loc[low, "demanda"], floor[low])
 
     def comp(row):
         c = float(row["est_competencia"])

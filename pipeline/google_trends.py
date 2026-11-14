@@ -10,6 +10,7 @@ los datos de la semana anterior para esas keywords.
 """
 from __future__ import annotations
 
+import os
 import random
 import time
 from datetime import datetime, timezone
@@ -18,11 +19,15 @@ import pandas as pd
 
 ANCHOR = "marketing digital"
 TIMEFRAME = "today 12-m"
-GEO = ""            # mundial: con keywords en español equivale al mundo hispanohablante
+GEO = os.getenv("TRENDS_GEO", "MX")   # series y búsquedas en ascenso: México, el mayor mercado hispano
+REGION_GEO = ""                        # el mapa por país sí se pide a nivel mundial
 COUNTRIES = {"Mexico": "MX", "Colombia": "CO", "Spain": "ES", "Argentina": "AR", "Peru": "PE",
              "Chile": "CL", "Ecuador": "EC", "Guatemala": "GT", "El Salvador": "SV",
              "Dominican Republic": "DO", "Venezuela": "VE", "Bolivia": "BO", "Costa Rica": "CR",
              "Honduras": "HN", "Panama": "PA", "Paraguay": "PY", "Uruguay": "UY", "United States": "US"}
+RELEVANT = {"curso", "cursos", "ia", "inteligencia", "artificial", "marketing", "chatgpt", "gemini", "claude", "agente",
+            "agentes", "prompts", "seo", "ads", "tiktok", "instagram", "negocio", "dinero", "certificado", "gratis",
+            "aprender", "ventas", "emprender", "digital", "online", "trabajo", "excel", "copilot"}
 RISING_SEEDS = ["curso de", "inteligencia artificial", "marketing digital", "cómo ganar dinero", "cursos gratis"]
 
 
@@ -76,7 +81,9 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
                     "dates": [d.strftime("%Y-%m-%d") for d in df.index],
                     "values": [round(float(v) * factor, 2) for v in df[kw].tolist()],
                 }
-        reg = _call(lambda: py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=False), label)
+        reg = _call(lambda: (py.build_payload(batch, timeframe=TIMEFRAME, geo=REGION_GEO),
+                             py.interest_by_region(resolution="COUNTRY", inc_low_vol=True, inc_geo_code=False))[1],
+                    label, tries=2)
         if reg is not None and not reg.empty:
             reg = reg[[c for c in reg.columns if c in batch]]
             reg = reg[reg.index.isin(COUNTRIES)]
@@ -93,7 +100,11 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
                    f"rising {seed}", tries=2)
         if not rq or seed not in rq or rq[seed].get("rising") is None:
             continue
-        for _, r in rq[seed]["rising"].head(15).iterrows():
+        for _, r in rq[seed]["rising"].head(25).iterrows():
+            q = str(r["query"]).lower()
+            # descarta ruido sin relación con el tema (pasa con términos amplios)
+            if not (set(q.split()) & (set(seed.split()) | RELEVANT)):
+                continue
             rising.append({"seed": seed, "query": str(r["query"]), "value": str(r["value"])})
         time.sleep(random.uniform(4, 8))
 
@@ -101,6 +112,7 @@ def collect(keywords: list[str], max_batches: int | None = None) -> dict | None:
         return None
     return {
         "source": "Google Trends (pytrends)",
+        "geo": GEO or "mundial",
         "anchor": ANCHOR,
         "timeframe": TIMEFRAME,
         "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
